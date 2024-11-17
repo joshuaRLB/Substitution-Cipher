@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substitution Cipher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Substitution Cipher</h2>
+
+<!-- Container for the two forms -->
+<div class="container">
+
+    <!-- Encryption Form -->
+     <br>
+    <div class="form-container">
+        <h3>Encryption</h3>
+        <label for="plaintext">Enter Plaintext:</label>
+        <input type="text" id="plaintext" placeholder="Enter text here">
+        <button onclick="encryptText()">Encrypt</button>
+
+        <div class="result">
+            <h3>Encrypted Text:</h3>
+            <span id="encryptedText"></span>
+        </div>
+    </div>
+
+    <!-- Decryption Form -->
+    <div class="form-container">
+        <h3>Decryption</h3>
+        <label for="encryptedInput">Enter Encrypted Text:</label>
+        <input type="text" id="encryptedInput" placeholder="Enter text here" />
+        <button onclick="decryptText()">Decrypt</button>
+
+        <div class="result">
+            <h3>Decrypted Text:</h3>
+            <span id="decryptedText"></span>
+        </div>
+    </div>
+
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
